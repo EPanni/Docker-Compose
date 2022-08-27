@@ -1,2 +1,3 @@
 # Generic-Scripts---JS-Python
-Generic scripts that can be useful as a reference in simple projects.
+
+Project to store generic scripts that may be useful and used as a reference in simple projects.
