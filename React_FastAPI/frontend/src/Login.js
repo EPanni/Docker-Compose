@@ -50,7 +50,7 @@ export default function Login() {
               <p>
               <label style={{ marginRight: 10 }}>Input Password</label>
               <input
-                type="text"
+                type ="password" name ="name_of_password_box"
                 onChange={(e) => setPassword(e.target.value)}
               />
               </p>
