@@ -1,3 +1,7 @@
-# Example of a simple Login page using fastapi and react.
+In order to start the application:
 
-The code strutcture is still to be organized and so is the documentation.
+1 - Uncomment the .env-example file and add the user and password
+
+2 - After doing that go to your terminal and run:
+    - docker-compose up --build
+
