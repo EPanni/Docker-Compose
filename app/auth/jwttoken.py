@@ -1,3 +1,8 @@
+import os
+import sys
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),"../")))
+
 """ Modules responsible for handling related to the jwt token"""
 from base64 import encode
 from datetime import datetime, timedelta
@@ -10,10 +15,13 @@ ALGORITHM = environ.get("ALGORITHM")
 ACCESS_TOKEN_EXPIRE_MINUTES = environ.get("ACCESS_TOKEN_EXPIRE_MINUTES")
 
 
+
+
 def create_access_token(data: dict):
     "Creates an access token with expires after a certain time"
+    print(type(ACCESS_TOKEN_EXPIRE_MINUTES ))
     to_encode = data.copy()
-    expire = datetime.utcnow() + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
+    expire = datetime.utcnow() + timedelta(minutes=int(ACCESS_TOKEN_EXPIRE_MINUTES))
     to_encode.update({"exp": expire})
     encode_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return encode_jwt
