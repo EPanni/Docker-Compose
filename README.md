@@ -1,3 +1,5 @@
+Simple application - Further validation tests shall be added
+
 In order to start the application:
 
 1 - Uncomment the .env-example file and add the user and password
