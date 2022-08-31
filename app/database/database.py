@@ -8,7 +8,7 @@ from sqlalchemy.orm import declarative_base, sessionmaker
 load_dotenv()
 
 #TODO: Replace it to use .env
-url = ("User:Password@localhost/DB")
+url = ("User:Password@172.0.0.2/DB")
 
 engine = create_engine(f"postgresql://{url}", echo=True)
 Base = declarative_base()

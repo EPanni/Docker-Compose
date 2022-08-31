@@ -1,0 +1,37 @@
+version: '3.7'
+
+services:
+  db:
+    image: postgres:alpine
+    networks:
+      app-net:
+        ipv4_address: 172.0.0.2
+    env_file:
+      -  .env
+    volumes:
+      - /backend:/data/db
+    ports:
+      - "5432:5432"
+    expose:
+      - 5432
+  
+  backend:
+    networks:
+      app-net:
+        ipv4_address: 172.0.0.3
+    build: .
+    env_file:
+        - .env
+    ports:
+      - "8000:8000"
+    expose:
+      - 8000
+    depends_on:
+      - db
+
+networks:
+  app-net:
+    driver: bridge
+    ipam:
+      config:
+        -   subnet: 172.17.0.0/16

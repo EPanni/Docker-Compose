@@ -10,9 +10,9 @@ from fastapi.security import OAuth2PasswordRequestForm
 import uvicorn
 from auth.oauth import get_current_user
 from auth.hashing import Hash
-from .auth.jwttoken import create_access_token
-from .models.schemas import User
-from .models.models import UserMod
+from auth.jwttoken import create_access_token
+from models.schemas import User
+from models.models import UserMod
 from database.database import engine, Base, SessionLocal
 
 

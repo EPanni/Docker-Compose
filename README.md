@@ -1,7 +1,15 @@
-#
+# Application
 
-Simple application - Further validation tests shall be added
+  This application consists in a backend (FastAPI) and database (Postgree)
+   running in docker and with a basic authentication method (Further validations
+   as password criteria and user registration, for example, may still be implemented).
 
-## Command to start postgres (Test Only)
+  The API Documentation can be accessed in localhost:8000/docs.
 
-docker run --name db -e POSTGRES_DB=DB -e POSTGRES_USER=User -e POSTGRES_PASSWORD=Password -p 5432:5432 -d postgres:alpine     
+# INSTRUCTIONS TO RUN APPLICATION
+
+  Go to the folder where the docker-compose file is located and run:
+  - $ docker-compose up --build
+
+  Dependencies:
+  Docker environment properly configured
