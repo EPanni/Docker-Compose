@@ -1,5 +1,6 @@
 #
 
+Simple application - Further validation tests shall be added
 
 ## Command to start postgres (Test Only)
 
